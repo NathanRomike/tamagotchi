@@ -7,16 +7,18 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 public class Tamagotchi {
-  private String mName;
-  private int mFoodLevel;
-  private int mSleepLevel;
-  private int mActivityLevel;
+  private String mName = "";
+  private int mFoodLevel = 10;
+  private int mSleepLevel = 10;
+  private int mActivityLevel = 10;
 
   public Tamagotchi(String name) {
     mName = name;
-    // mFoodLevel = food;
-    // mSleepLevel = sleep;
-    // mActivityLevel = activity;
+  }
+  public Tamagotchi(int food, int sleep, int activity) {
+    mFoodLevel = food;
+    mSleepLevel = sleep;
+    mActivityLevel = activity;
   }
 
   public int getFoodLevel() {

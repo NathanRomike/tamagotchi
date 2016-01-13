@@ -36,4 +36,57 @@ public class Tamagotchi {
   public String getName() {
     return mName;
   }
+
+  public void decreaseFood() {
+    mFoodLevel--;
+  }
+
+  public void decreaseActivity() {
+    mActivityLevel--;
+  }
+
+  public void decreaseSleep() {
+    mSleepLevel--;
+  }
+
+  public void increaseSleep() {
+    mSleepLevel++;
+    mFoodLevel--;
+    mActivityLevel--;
+  }
+
+  public void increaseFood() {
+    mFoodLevel++;
+    mSleepLevel--;
+    mActivityLevel--;
+  }
+
+  public void increaseActivity() {
+    mActivityLevel++;
+    mFoodLevel--;
+    mSleepLevel--;
+  }
+
+  public void setFoodLevel(int setFoodLevel) {
+    mFoodLevel = setFoodLevel;
+  }
+
+  public void setSleepLevel(int setSleepLevel) {
+    mSleepLevel = setSleepLevel;
+  }
+
+  public void setActivityLevel(int setActivityLevel) {
+    mActivityLevel = setActivityLevel;
+  }
+
+  public boolean isAlive() {
+    if (mFoodLevel > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
+
 }
